@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "TrekOps",
+    "slug": "trekops-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "trekops",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#047857"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trekops.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow TrekOps to access your camera to capture trek photos and documents.",
+        "NSPhotoLibraryUsageDescription": "Allow TrekOps to access your photos to upload trek images and documents.",
+        "NSLocationWhenInUseUsageDescription": "Allow TrekOps to show your location on the trek map."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#047857"
+      },
+      "package": "com.trekops.mobile",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-notifications",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#047857",
+          "image": "./assets/splash.png",
+          "imageWidth": 220
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "extra": {
+      "graphqlUrl": "http://localhost:8080/graphql",
+      "socketUrl": "http://localhost:8080",
+      "apiBaseUrl": "http://localhost:8080"
+    }
+  }
+}
